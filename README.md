@@ -1,4 +1,7 @@
 ---
 # Twitter-Markov-Chain
-#### Final Project for CompSci 2270
+##### Final Project for CSCI 2270: Data Structures
 ---
+
+
+**Data Structures Used:**
