@@ -45,12 +45,10 @@ Okay, enough of that... Now to the data structures that I used!
 
 ## Data Structures
 
-***
-
 ### Graph:
-I built a graph sorta similar to this one...
+I built a graph extremely similar to this one... This is actually an example of [Filiph's](https://filiph.github.io/markov/) Trump word graph.
 
-![Word Graph](https://i.stack.imgur.com/1mbny.png)
+![Word Graph](https://filiph.github.io/markov/images/markov-trump-graph.png)
 
 This is the main data structure utilized for almost any application of Markov chains. It's relatively simple to store multiple 'states' in the vertices, and weight the edges in a specific way.
 
@@ -170,25 +168,29 @@ I used them for structuring certain data together in a logical format.
    - Vertices
    - Edges
 2. Developing an algorithm for scraping all of the useful information from the text file
-   - The struggle was real coming up with an efficient solution...
-3. Adding nuanced changes to my code to try to mimic human generated text
+   - The struggle was coming up with an efficient solution...
+3. Figuring out how to deal with the Adjacency Matrices
+   - Going from nothing, to implementing a function that builds a vector of the AdjList at the specified index
+   - Building a function that chooses the next word given the vector I built above ^
+4. Adding nuanced changes to my code to try to mimic human generated text
    - Capitalization
    - Punctuation
 
 ***
 
 ## Program Notes:
-Currently, my program goes out, gets Tweets from a specified user. Then it writes those tweets to a file, and calls the C++ to run on that file. After the C++ has interacted with the file and creates the graph, the user can prompt a random Tweet to be generated.
+Currently, my program goes out, gets Tweets from a specified user. Then it writes those tweets to a file, and uses system calls to compile and run the C++ files. After the C++ has interacted with the Tweet file and creates the graph, the user can prompt a random Tweet to be generated.
+
+***
+
+## Next Steps
 
 1. It works better with a smaller number of tweets collected... (This shouldn't necessarily be the case :/)
 2. I am currently working on perfecting the GUI version
    * Making it look more appealing
    * Making it run better (not getting hung)
+   * And then I will turn the GUI program into an executable so it can be run on any machines
 3. I am also currently working on turning the CLI version into an executable so it can be run on any machine.
-
-***
-
-## Next Steps
 
 - Making my GUI work perfectly, and have an appealing design
 - Looking at ways to optimize the C++
